@@ -1,0 +1,6 @@
+Flask
+flask-sqlalchemy
+openai
+python-dotenv
+supabase
+groq
