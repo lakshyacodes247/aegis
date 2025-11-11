@@ -88,7 +88,7 @@ def analyze_vulnerability():
 
     # ---------------- CHECK IF ALREADY EXISTS ----------------
     try:
-        existing = supabase.table("vulnerabilities").select("*").eq("vulnerability_id", vuln_id).execute()
+        existing = supabase.table("vulnerabilities").select("vulnerability_id, fix_description, fixed_code").eq("vulnerability_id", vuln_id).execute()
         if existing.data and len(existing.data) > 0:
             print("Found existing record for vulnerability_id:", vuln_id)
             return jsonify(existing.data[0]), 200
