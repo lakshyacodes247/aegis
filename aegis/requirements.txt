@@ -4,3 +4,4 @@ openai
 python-dotenv
 supabase
 groq
+Flask-CORS
